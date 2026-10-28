@@ -1,10 +1,10 @@
 with 
 l as
 (
-select * From {{ref('dim_listings')}}
+select * From {{ref('dim_listings_cleansed')}}
 ),
 h as
-(select * From {{ref('dim_hosts')}}
+(select * From {{ref('dim_hosts_cleansed')}}
 )
 SELECT
     l.listing_id,
